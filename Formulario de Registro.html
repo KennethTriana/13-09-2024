@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <style>
+        body {
+            background-color: #0404c6;
+            color: #090909;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .contenedor {
+            background-color: #e9e9f1;
+            padding: 2%;
+            border-radius: 8%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .campo-grande {
+            width: 90%;
+            font-size: 1.2rem;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .boton {
+            background-color: #0d09eb;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .boton:hover {
+            background-color: #05e94d;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h2>Registro de Usuario</h2>
+        <form id="registroForm" onsubmit="return validarRegistro()">
+            <div>
+                <input type="text" id="registroNombre" name="nombre" class="campo-grande" placeholder="Ingrese su Nombre" required>
+            </div>
+            <div>
+                <input type="email" id="registroEmail" name="email" class="campo-grande" placeholder="Ingrese su Email" required>
+            </div>
+            <div>
+                <input type="password" id="registroPassword" name="password" class="campo-grande" placeholder="Ingrese su Contraseña" required>
+            </div>
+            <div>
+                <input type="password" id="registroConfirmPassword" name="confirmPassword" class="campo-grande" placeholder="Confirme su Contraseña" required>
+            </div>
+            <button type="submit" class="boton">Registrarse</button>
+            <p id="errorRegistro" class="error"></p>
+        </form>
+    </div>
+
+    <script>
+        function validarRegistro() {
+            var nombre = document.getElementById('registroNombre').value;
+            var email = document.getElementById('registroEmail').value;
+            var password = document.getElementById('registroPassword').value;
+            var confirmPassword = document.getElementById('registroConfirmPassword').value;
+            var errorMensaje = '';
+
+            // Validar que los campos no estén vacíos
+            if (nombre === '') {
+                errorMensaje = 'El nombre no puede estar vacío';
+            } else if (email === '') {
+                errorMensaje = 'El correo no puede estar vacío';
+            } else if (!validarEmail(email)) {
+                errorMensaje = 'El formato del correo no es válido';
+            } else if (password === '') {
+                errorMensaje = 'La contraseña no puede estar vacía';
+            } else if (password !== confirmPassword) {
+                errorMensaje = 'Las contraseñas no coinciden';
+            }
+
+            // Mostrar mensaje de error si hay
+            if (errorMensaje !== '') {
+                document.getElementById('errorRegistro').innerText = errorMensaje;
+                return false;
+            }
+
+            alert('Registro exitoso');
+            return true;
+        }
+
+        function validarEmail(email) {
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada Empleado</title>
+    <style>
+        body {
+            background-color: #0404a5;
+            color: #090909;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        .contenedor {
+            background-color: #e9e9f1;
+            padding: 2%;
+            border-radius: 8%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 70%;
+            margin: 0;
+        }
+
+        .campo-grande {
+            width: 50%;
+            font-size: 1.2rem;
+            padding: 1%;
+            margin-bottom: 20px;
+        }
+
+        .boton {
+            background-color: #0d09eb;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        .boton:hover {
+            background-color: #05e94d;
+        }
+        
+        .error {
+            color: red;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h2>¡Bienvenido Al Autoservicio Estimado Empleado!</h2>
+        <form id="loginForm" onsubmit="return validarLogin()">
+            <div>
+                <input type="text" id="loginEmail" name="email" class="campo-grande" placeholder="Ingrese su Email" required>
+            </div>
+            <div>
+                <input type="password" id="loginPassword" name="password" class="campo-grande" placeholder="Ingrese su contraseña" required>
+            </div>
+            <button type="submit" class="boton">Iniciar sesión</button>
+            <h2><a href="#">¿Olvidó su contraseña?</a></h2>
+            <p id="errorLogin" class="error"></p>
+        </form>
+    </div>
+
+    <script>
+        function validarLogin() {
+            var email = document.getElementById('loginEmail').value;
+            var password = document.getElementById('loginPassword').value;
+            var errorMensaje = '';
+
+            // Validar que los campos no estén vacíos
+            if (email === '') {
+                errorMensaje = 'El correo no puede estar vacío';
+            } else if (!validarEmail(email)) {
+                errorMensaje = 'El formato del correo no es válido';
+            } else if (password === '') {
+                errorMensaje = 'La contraseña no puede estar vacía';
+            }
+
+            // Mostrar mensaje de error si hay
+            if (errorMensaje !== '') {
+                document.getElementById('errorLogin').innerText = errorMensaje;
+                return false;
+            }
+
+            // Si todo está bien, redirigir a la página del gerente
+            window.location.href = '11.Empleado.html';
+            return false;  // Evita que se envíe el formulario de forma predeterminada
+        }
+
+        function validarEmail(email) {
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+    </script>
+</body>
+</html>

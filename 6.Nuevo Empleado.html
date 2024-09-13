@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerente Datos</title>
+    <style>
+        body {
+            background-color: #0707e9;
+            color: #090909;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            height: 100%;
+        }
+        .contenedor {
+            background-color: #e9e9f1;
+            padding: 1%;
+            border-radius: 5%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            width: 70%; /* Ancho del contenedor al 90% */
+            max-width: 70%; /* Máximo ancho del contenedor */
+        }
+        .frase {
+            font-size: 900% rem;
+            margin-bottom: 2%;
+            margin-left: 1%;
+        }
+        input {
+            width: 40%; /* Ancho del 90% para los campos de Cantidad */
+            padding: 1%;
+            box-sizing: border-box;
+            margin: 1%;
+        }
+        .boton {
+            background-color: #e9e9f1;
+            color: #000000;
+            padding: 1%;
+            text-decoration: none;
+            font-size: 90%;
+            margin: -4%;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.3s;
+            position: absolute;
+        }
+        .boton:hover {
+            background-color: #06c326;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <form>
+            <div class="frase">Datos Empleado</div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="idnombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="idemail" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="cedula">N° Cédula:</label>
+                <input type="text" id="idcedula" name="cedula" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="idtelefono" name="telefono" required>
+            </div>
+            <div class="form-group"></div>
+                <label for="contraseña">Contraseña:</label>
+                <input type="pasword" id="idcontraseña" name="contraseña" required>
+            </div>
+            <a href="4.Gerente 2.html" class="boton">Crear Nuevo Usuario</a>
+        </form>
+    </script>
+</body>
+</html>

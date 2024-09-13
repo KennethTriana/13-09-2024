@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerente Datos</title>
+    <style>
+        body {
+            background-color: #0707e9;
+            color: #090909;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .contenedor {
+            background-color: #e9e9f1;
+            padding: 1%;
+            border-radius: 5%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            width: 70%; /* Ancho del contenedor al 90% */
+            max-width: 70%; /* Máximo ancho del contenedor */
+        }
+        .frase {
+            font-size: 900% rem;
+            margin-bottom: 2%;
+            margin-left: 1%;
+        }
+        input {
+            width: 60%; /* Ancho del 90% para los campos de Cantidad */
+            padding: 1%;
+            box-sizing: border-box;
+            margin: 1%;
+        }
+        .boton {
+            background-color: #1c0fa4;
+            color: #ece2e2;
+            padding: 2%;
+            text-decoration: none;
+            font-size: 90%;
+            margin: 2%;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .boton:hover {
+            background-color: #06c326;
+        }
+        .botones {
+            display: flex;
+            flex-direction: row; /* Alineación horizontal de los botones */
+            justify-content: space-between; /* Espacio uniforme entre los botones */
+            width: 80%; /* Ancho del contenedor de botones */
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <form>
+            <div class="frase">Datos Personales</div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="cedula">N° Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+        </form>
+
+        <div class="botones botones izquierda">
+            <a href="6.Nuevo Empleado.html" class="boton">Nuevo Empleado</a>
+            <a href="5.Gerente Datos.html" class="boton">Actualizar Datos</a>
+            <a href="#" class="boton" onclick="closeWindow()">Cerrar Sesión</a>
+        </div>
+        <script>
+            function closeWindow() {
+                if (confirm("¿Estás seguro de que deseas cerrar esta página?")) {
+                    window.close();
+                }
+            }
+        </script>
+
+    </script>
+</body>
+</html>

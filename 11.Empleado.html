@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleado</title>
+    <style>
+        body {
+            background-color: #0707e9;
+            color: #090909;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .contenedor {
+            background-color: #e9e9f1;
+            padding: 1%;
+            border-radius: 5%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            width: 50%; /* Ancho del contenedor al 90% */
+            max-width: 70%; /* Máximo ancho del contenedor */
+        }
+        table {
+            width: 100%; /* Ancho completo de la tabla */
+            border-collapse: collapse;
+            margin-bottom: 1%;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 1%;
+            text-align: center;
+        }
+        input {
+            width: 90%; /* Ancho del 90% para los campos de Cantidad */
+            padding: 1%;
+            box-sizing: border-box;
+        }
+        .boton {
+            background-color: #1c0fa4;
+            color: #ece2e2;
+            padding: 2%;
+            text-decoration: none;
+            font-size: 90%;
+            margin: 2%;
+            border-radius: 10%;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .boton:hover {
+            background-color: #06c326;
+        }
+        .botones {
+            display: flex;
+            flex-direction: row; /* Alineación horizontal de los botones */
+            justify-content: space-between; /* Espacio uniforme entre los botones */
+            width: 30%; /* Ancho del contenedor de botones */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <form>
+            <label for="nombre"></label>
+            <h2><input type="text" id="nombre" name="nombre" class="campo-grande" placeholder="Búsqueda" required></h2>
+        </form>
+        
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Productos</th>
+                    <th>Código</th>
+                    <th>Cantidad</th>
+                    <th>Valor Salida</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de una fila, puedes agregar más según sea necesario -->
+                <tr>
+                    <td><input type="text" name="producto" placeholder="Nombre del producto"></td>
+                    <td><input type="text" name="codigo" placeholder="Código"></td>
+                    <td><input type="number" name="Cantidad" class="Cantidad" placeholder="Cantidad"></td>
+                    <td><input type="number" name="salida" class="salida" placeholder="Valor de salida"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="producto" placeholder="Nombre del producto"></td>
+                    <td><input type="text" name="codigo" placeholder="Código"></td>
+                    <td><input type="number" name="Cantidad" class="Cantidad" placeholder="Cantidad"></td>
+                    <td><input type="number" name="salida" class="salida" placeholder="Valor de salida"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="producto" placeholder="Nombre del producto"></td>
+                    <td><input type="text" name="codigo" placeholder="Código"></td>
+                    <td><input type="number" name="Cantidad" class="Cantidad" placeholder="Cantidad"></td>
+                    <td><input type="number" name="salida" class="salida" placeholder="Valor de salida"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="producto" placeholder="Nombre del producto"></td>
+                    <td><input type="text" name="codigo" placeholder="Código"></td>
+                    <td><input type="number" name="Cantidad" class="Cantidad" placeholder="Cantidad"></td>
+                    <td><input type="number" name="salida" class="salida" placeholder="Valor de salida"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="producto" placeholder="Nombre del producto"></td>
+                    <td><input type="text" name="codigo" placeholder="Código"></td>
+                    <td><input type="number" name="Cantidad" class="Cantidad" placeholder="Cantidad"></td>
+                    <td><input type="number" name="salida" class="salida" placeholder="Valor de salida"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="producto" placeholder="Nombre del producto"></td>
+                    <td><input type="text" name="codigo" placeholder="Código"></td>
+                    <td><input type="number" name="Cantidad" class="Cantidad" placeholder="Cantidad"></td>
+                    <td><input type="number" name="salida" class="salida" placeholder="Valor de salida"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="producto" placeholder="Nombre del producto"></td>
+                    <td><input type="text" name="codigo" placeholder="Código"></td>
+                    <td><input type="number" name="Cantidad" class="Cantidad" placeholder="Cantidad"></td>
+                    <td><input type="number" name="salida" class="salida" placeholder="Valor de salida"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="producto" placeholder="Nombre del producto"></td>
+                    <td><input type="text" name="codigo" placeholder="Código"></td>
+                    <td><input type="number" name="Cantidad" class="Cantidad" placeholder="Cantidad"></td>
+                    <td><input type="number" name="salida" class="salida" placeholder="Valor de salida"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="producto" placeholder="Nombre del producto"></td>
+                    <td><input type="text" name="codigo" placeholder="Código"></td>
+                    <td><input type="number" name="Cantidad" class="Cantidad" placeholder="Cantidad"></td>
+                    <td><input type="number" name="salida" class="salida" placeholder="Valor de salida"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="producto" placeholder="Nombre del producto"></td>
+                    <td><input type="text" name="codigo" placeholder="Código"></td>
+                    <td><input type="number" name="Cantidad" class="Cantidad" placeholder="Cantidad"></td>
+                    <td><input type="number" name="salida" class="salida" placeholder="Valor de salida"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="producto" placeholder="Nombre del producto"></td>
+                    <td><input type="text" name="codigo" placeholder="Código"></td>
+                    <td><input type="number" name="Cantidad" class="Cantidad" placeholder="Cantidad"></td>
+                    <td><input type="number" name="salida" class="salida" placeholder="Valor de salida"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td id="total-Cantidad">0</td>
+                    <td id="total-salida">0</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <!-- Botones restantes a la derecha de la tabla -->
+        <div class="botones botones-derecha">
+            <a href="12.Datos Empleado.html" class="boton">Perfil</a>
+            <a href="7.Productos Inventario.html" class="boton">Inventario</a>
+            <a href="8.Historial Ingreso.html" class="boton">Historial</a>
+            <a href="#" class="boton">Alerta</a>
+            <a href="#" class="boton">Hacer factura</a> <!-- Nuevo botón -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filas = document.querySelectorAll('#tabla tbody tr');
+            const totalCantidad = document.getElementById('total-Cantidad');
+            const totalSalida = document.getElementById('total-salida');
+
+            filas.forEach(fila => {
+                const Cantidad = fila.querySelector('.Cantidad');
+                const salida = fila.querySelector('.salida');
+
+                Cantidad.addEventListener('input', calcularTotales);
+                salida.addEventListener('input', calcularTotales);
+            });
+
+            function calcularTotales() {
+                let totalCantidadValor = 0;
+                let totalSalidaValor = 0;
+
+                filas.forEach(fila => {
+                    const CantidadValor = parseFloat(fila.querySelector('.Cantidad').value) || 0;
+                    const salidaValor = parseFloat(fila.querySelector('.salida').value) || 0;
+
+                    totalCantidadValor += CantidadValor;
+                    totalSalidaValor += salidaValor * CantidadValor;
+                });
+
+                totalCantidad.textContent = totalCantidadValor.toFixed(0);
+                totalSalida.textContent = totalSalidaValor.toFixed(3);
+            }
+        });
+    </script>
+</body>
+</html>
